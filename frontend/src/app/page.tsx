@@ -16,10 +16,13 @@ const productsEid = [
 	{image: 'https://i.imgur.com/07XeQrP.jpg', title: 'Product Four', price: '89999 PKR'},
 	{image: 'https://i.imgur.com/rZjZpvg.jpg', title: 'Product Five', price: '149999 PKR'},
 ]
-const ProductsHome = ({products}: {products: {image: string, title: string, price: string}[]}) => {
-	const productList = products.map((product) => <ProductHome product={product}/>)
-	return <div className='home-featured-products-products-container'>{productList}</div>
-}
+const ProductsHome = ({ products }: { products: { image: string, title: string, price: string }[] }) => {
+	const productList = products.map((product, index) => (
+	  <ProductHome key={index} product={product} />
+	));
+	return <div className='home-featured-products-products-container'>{productList}</div>;
+  };
+  
 export default function Home() {
 	return (
 		<>
