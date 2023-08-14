@@ -2,8 +2,8 @@
 
 :root {
 	--primary-margin: 2rem;
-	--primary-color: #c0eae5;
-	--secondary-color: #c5f0eb;
+	--primary-color: #c5f0f1;
+	--secondary-color: #a9e0e1;
 	--primary: #ffe3df;
 	--secondary: #ffcdc6;
 	--tertiary: #ff9d9d;
@@ -29,7 +29,7 @@ body {
 	height: 70px;
 	border-radius: 15px;
 	position: fixed;
-	z-index: 100000;
+	z-index: 2;
 	border: 2px solid var(--secondary);
 	margin-top: 20px;
 	margin-right: var(--primary-margin);
@@ -54,7 +54,7 @@ body {
 	grid-template-columns: 2rem 2fr 1fr 2fr 2rem;
 	height: 70px;
 	border: 2px solid black;
-	z-index: 100000;
+	z-index: 2;
 	border-radius: 15px;
 	position: fixed;
 	margin-top: 20px;
@@ -231,6 +231,8 @@ body {
 	background-color: var(--secondary);
 	border-radius: 15px;
 	height: 70vh;
+	margin-right: var(--primary-margin);
+	margin-left: var(--primary-margin);
 	margin-bottom: 50px;
 	width: calc(100% - (var(--primary-margin)) - (var(--primary-margin)));
 }
@@ -244,6 +246,14 @@ body {
 .home-home-btns {
 	margin-top: 30px;
 	width: fit-content;
+}
+.dashboard-dashboard-btns {
+	width: 450px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	align-items: center;
+	flex-direction: row;
 }
 .home-home-btn-primary {
 	padding: 12.5px 20px;
@@ -287,6 +297,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-right: var(--primary-margin);
+	margin-left: var(--primary-margin);
 	background-color: var(--secondary);
 	border-radius: 15px;
 	height: fit-content;
@@ -337,6 +349,209 @@ body {
 	width: 80%;
 	height: 200px;
 }
+.dashboard-dashboard-input {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: 200px;
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+.dashboard-dashboard-input-one {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: 200px;
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	margin-right: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+.dashboard-dashboard-input-big {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: 420px;
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	margin-right: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+.dashboard-dashboard-input:hover {
+	transform: scale(1.1);
+}
+.dashboard-dashboard-input-big:hover {
+	transform: scale(1.1);
+}
+.dashboard-dashboard-input-one:hover {
+	transform: scale(1.1);
+}
+.dashboard-dashboard-input:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-dashboard-input-one:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-dashboard-input-big:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-dashboard-btn-primary {
+	padding: 12px 60px;
+	border: 2px solid black;
+	width: 420px;
+	background-color: var(--primary);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+.dashboard-dashboard-btn-primary:hover {
+	transform: scale(1.1);
+}
+
+
+.dashboard-main-input {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: calc(45% - 30px);
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+  }
+  
+  .dashboard-main-input-one {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: calc(45% - 30px);
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+  }
+  
+  .dashboard-main-input-big {
+	padding: 12.5px 20px;
+	border: 2px solid black;
+	width: calc(100% + 40px);
+	background-color: var(--primary-color);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+  }
+  
+.dashboard-main-input:hover {
+	transform: scale(1.1);
+}
+.dashboard-main-input-big:hover {
+	transform: scale(1.1);
+}
+.dashboard-main-input-one:hover {
+	transform: scale(1.1);
+}
+.dashboard-main-input:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-main-input-one:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-main-input-big:focus {
+	outline: none;
+	cursor: text; 
+}
+.dashboard-main-btn-primary {
+	padding: 12px 60px;
+	border: 2px solid black;
+	width: 420px;
+	background-color: var(--primary);
+	color: black;
+	border-radius: 5px;
+	font-family: "Inter";
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+.dashboard-main-btn-primary:hover {
+	transform: scale(1.1);
+}
+.product-page-container {
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	flex-direction: row;
+}
+.product-page-left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product-page-right {
+	width: 50%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+}
+.product-page-img {
+	width: 70%;
+	height: auto;
+	border: 2px solid black;
+	border-radius: 15px;
+	transition: 0.5s all ease-in-out;
+	cursor: pointer;
+}
+.product-page-img:hover {
+	transform: scale(1.1);
+}
+.shake-animation {
+	animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  
+  @keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+  
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+  }
+  
 @media (max-width: 768px) {
 	.navbar-left, .navbar-right, .navbar-middle {
 		display: none;
@@ -382,6 +597,18 @@ body {
 		width: calc(100% - 30px);
 		margin: 0;
 	}
+	.dashboard-dashboard-btn-primary {
+		width: calc(100% - 30px);
+		margin: 0;
+	}
+	.dashboard-dashboard-input {
+		width: calc(100% - 50px - 12.5px - 12.5px);
+		margin: 10px 0 0 0;
+	}
+	.dashboard-dashboard-input-one {
+		width: calc(100% - 50px - 12.5px - 12.5px);
+		margin: 10px 0 0 0;
+	}
 	.home-home-btn-secondary {
 		width: calc(100% - 30px);
 		margin: 15px 0;
@@ -411,5 +638,19 @@ body {
 	}
 	.footer-text {
 		font-size: 12px;
+	}
+	.dashboard-dashboard-btns {
+		flex-wrap: wrap;
+		width: 80%;
+		justify-content: center;
+		margin: 0;
+	}
+	.dashboard-main-input, .dashboard-main-input-big, .dashboard-main-input-one {
+		width: 90%;
+		margin: 0;
+		margin-top: 15px;
+	}
+	.dashboard-main-btn-primary {
+		margin-top: 15px;
 	}
 }

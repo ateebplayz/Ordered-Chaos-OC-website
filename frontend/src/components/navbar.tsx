@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { AiFillHome, AiFillProject } from 'react-icons/ai'
 import { BsFillPersonFill,BsFillChatFill, BsFillCartFill } from 'react-icons/bs'
 export default function NavBar() {
+	const [activePage, setActivePage] = useState('')
 	const [isScrolled, setIsScrolled] = useState(false)
 	useEffect(() => {
 		const handleScroll = () => {
@@ -25,23 +26,33 @@ export default function NavBar() {
 		  window.removeEventListener('scroll', handleScroll);
 		};
 	  }, []);	
+	useEffect(() => {
+		const currentPath = window.location.pathname;
+		setActivePage(currentPath);
+	}, []);
+	const getPathVal = (path: string) => {
+		if(path === activePage) return 'navbar-btn-active';
+		return 'navbar-btn-disabled';
+	}
 	return (
 		<div className={`navbar-container${isScrolled ? ' scrolled' : ''}`}>
 			<div className="navbar-left">
 				<div className="navbar-left-uwu">
-					<Link className="navbar-btn-active" href="/">
+					<Link className={getPathVal('/')} href="/">
 						<p>Home</p>
 					</Link>
-					<Link className="navbar-btn-disabled" href="/projects">
+					<Link className={getPathVal('/products')} href="/products">
 						<p>Products</p>
 					</Link>
-					<Link className="navbar-btn-disabled" href="/pricing">
+					<Link className={getPathVal('/contact')} href="/contact">
 						<p>Contact</p>
 					</Link>
 				</div>
 			</div>
 			<div className="navbar-middle">
-				<p className={`navbar-name	${isScrolled ? '' : ''}`} style={{textShadow:'-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'}}>Ordered<span className={`navbar-text${isScrolled ? ' scrolled' : ''}`}>Chaos</span></p>
+				<Link style={{textDecoration: 'none', color: 'white'}} href="/">
+					<p className={`navbar-name	${isScrolled ? '' : ''}`} style={{textShadow:'-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'}}>Ordered<span className={`navbar-text${isScrolled ? ' scrolled' : ''}`}>Chaos</span></p>
+				</Link>
 			</div>
 			<div className="navbar-right">
 				<div style={{marginLeft: '10rem', width: '100%',height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>

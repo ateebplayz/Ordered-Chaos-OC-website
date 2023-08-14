@@ -1,13 +1,12 @@
 export interface Product {
-    id: number,
+    id: string,
     title: string,
     description: string,
-    images?: string[],
-    inStock: boolean,
-    inSale: boolean,
+    images: string[],
+    inStock: string,
+    inSale: string,
+    featured: string,
     special: string,
-    prices: {
-        price: number,
-        discountedPrice: number,
-    }
+    price: string,
+    discountedPrice?: string,
 }
